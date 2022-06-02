@@ -6,26 +6,26 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "profiles")
-public class Profile {
+@Table(name = "phones")
+public class Phone {
 	@Id
     @Column(name = "id")
-	@SequenceGenerator(name = "profilesIdSeq", sequenceName = "profiles_id_seq", allocationSize = 5)
-	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "profilesIdSeq")
+	@SequenceGenerator(name = "phonesIdSeq", sequenceName = "phones_id_seq", allocationSize = 5)
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "phonesIdSeq")
 	private Long id;
 	
-	@Column(name = "cash")
-	private Float cash;
+	@Column(name = "value")
+	private String value;
 	
-	@OneToOne(fetch = FetchType.LAZY)
+	@ManyToOne(fetch = FetchType.LAZY)
 	private User user;
 	
-	public Profile() {
+	public Phone() {
 		
 	}
 
@@ -37,12 +37,12 @@ public class Profile {
 		this.id = id;
 	}
 
-	public Float getCash() {
-		return cash;
+	public String getValue() {
+		return value;
 	}
 
-	public void setCash(Float cash) {
-		this.cash = cash;
+	public void setValue(String value) {
+		this.value = value;
 	}
 
 	public User getUser() {
@@ -52,6 +52,4 @@ public class Profile {
 	public void setUser(User user) {
 		this.user = user;
 	}
-	
-	
 }
