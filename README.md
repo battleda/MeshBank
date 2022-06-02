@@ -7,19 +7,32 @@ Java 11 версии
 Использовать maven
 
 База данных (по согласованию можно добавить поля и таблицы)
+
 USERS:
+
     ID: bigint
+    
     NAME: varchar
-            AGE: ?
+    
+    AGE: ?
+    
     EMAIL: varchar
+    
 PROFILES:
+    
     ID: bigint
+    
     CASH: ? рубли + копейки
+    
     USER_ID: связь с таблицей users по ID
+
 PHONES:
+    
     ID: bigint
+    
     VALUE: varchar
-USER_ID: связь с таблицей users по ID
+
+    USER_ID: связь с таблицей users по ID
 
 Требование к API и функционалу
 Реализовать CRUD для пользователя (обязательно сделать сервис слой)
