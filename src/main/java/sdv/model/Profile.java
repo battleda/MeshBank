@@ -10,6 +10,8 @@ import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 @Table(name = "profiles")
 public class Profile {
@@ -22,6 +24,7 @@ public class Profile {
 	@Column(name = "cash")
 	private Float cash;
 	
+	@JsonIgnore
 	@OneToOne(fetch = FetchType.LAZY)
 	private User user;
 	
