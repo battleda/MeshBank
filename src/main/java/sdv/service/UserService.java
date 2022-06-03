@@ -30,4 +30,8 @@ public class UserService {
 		return userDao.findByNameContains(name);
 	}
 	
+	public void deleteUser(User user) {
+		userDao.deleteById(user.getId());
+	}
+	
 }
