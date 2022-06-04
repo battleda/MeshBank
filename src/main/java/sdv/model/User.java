@@ -93,6 +93,8 @@ public class User {
 		
 		Profile profile1 = new Profile();
 		profile1.setCash(100f);
+		profile1.calculateMaxCash();
+		profile1.setDateChanged(new GregorianCalendar());
 		profile1.setUser(usr1);
 		
 		usr1.setProfile(profile1);
@@ -122,6 +124,8 @@ public class User {
 		
 		Profile profile2 = new Profile();
 		profile2.setCash(1000f);
+		profile2.calculateMaxCash();
+		profile2.setDateChanged(new GregorianCalendar());
 		profile2.setUser(usr2);
 		
 		usr2.setProfile(profile2);
@@ -157,6 +161,8 @@ public class User {
 		
 		Profile profile3 = new Profile();
 		profile3.setCash(1000f);
+		profile3.calculateMaxCash();
+		profile3.setDateChanged(new GregorianCalendar());
 		profile3.setUser(usr3);
 		
 		usr3.setProfile(profile3);
@@ -180,6 +186,8 @@ public class User {
 		
 		Profile profile4 = new Profile();
 		profile4.setCash(500f);
+		profile4.calculateMaxCash();
+		profile4.setDateChanged(new GregorianCalendar());
 		profile4.setUser(usr4);
 		
 		usr4.setProfile(profile4);
@@ -209,6 +217,8 @@ public class User {
 		
 		Profile profile5 = new Profile();
 		profile5.setCash(1200f);
+		profile5.calculateMaxCash();
+		profile5.setDateChanged(new GregorianCalendar());
 		profile5.setUser(usr5);
 		
 		usr5.setProfile(profile5);

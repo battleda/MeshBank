@@ -40,7 +40,7 @@ class _UserServiceTest {
 		assertEquals("Check for 5 added users", 5, users.size());
 		
 		for(User user: users) {
-			userService.deleteUser(user);
+			//userService.deleteUser(user);
 		}
 	}
 
