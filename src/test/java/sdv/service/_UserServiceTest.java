@@ -42,6 +42,10 @@ class _UserServiceTest {
 		for(User user: users) {
 			//userService.deleteUser(user);
 		}
+		
+		userService.getProfileById(1l);
+		
+		userService.getProfileById(1l);
 	}
 
 }

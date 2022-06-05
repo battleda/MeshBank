@@ -48,7 +48,11 @@ public class UserService {
 	}
 	
 	public User getUserById(Long id) {
-		return userDao.getOne(id);
+		return userDao.getById(id);
+	}
+	
+	public Profile getProfileById(Long id) {
+		return profileDao.getById(id);
 	}
 	
 }
